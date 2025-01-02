@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">Recipe Won</a>
+
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item">
+        <a referrerpolicy=""
+          class="nav-link" 
+          [class.active]="selectedFeature === 'recipe'" 
+          routerLink="/recipes" 
+          (click)="onSelect('recipe')">
+          Recipes
+        </a>
+      </li>
+      <li class="nav-item">
+        <a 
+          class="nav-link" 
+          [class.active]="selectedFeature === 'shopping-list'" 
+          routerLink="/shopping" 
+          (click)="onSelect('shopping-list')">
+          Shopping List
+        </a>
+      </li>
+      <li class="nav-item">
+        <a 
+          class="nav-link" 
+          [class.active]="selectedFeature === 'employee-list'" 
+          routerLink="/employees" 
+          (click)="onSelect('employee-list')">
+          Employee List
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

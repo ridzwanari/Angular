@@ -1,0 +1,53 @@
+<div class="container mt-4">
+    <h2>Create Employee</h2>
+  
+    <!-- Display Success/Error Messages -->
+    <div *ngIf="successMessage" class="alert alert-success">
+      {{ successMessage }}
+    </div>
+    <div *ngIf="errorMessage" class="alert alert-danger">
+      {{ errorMessage }}
+    </div>
+  
+    <form #employeeForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="firstName" class="form-label">First Name</label>
+        <input
+          type="text"
+          id="firstName"
+          class="form-control"
+          [(ngModel)]="employee.firstName"
+          name="firstName"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input
+          type="text"
+          id="lastName"
+          class="form-control"
+          [(ngModel)]="employee.lastName"
+          name="lastName"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="emailId" class="form-label">Email</label>
+        <input
+          type="text"
+          id="emailId"
+          class="form-control"
+          [(ngModel)]="employee.emailId"
+          name="emailId"
+        
+        />
+      </div>
+  
+      <!-- Submit Button with Disabled State if Form is Invalid -->
+      <button type="submit" class="btn btn-primary" [disabled]="!employeeForm.form.valid || isSubmitting">
+        {{ isSubmitting ? 'Submitting...' : 'Submit' }}
+      </button>
+    </form>
+  </div>
+  

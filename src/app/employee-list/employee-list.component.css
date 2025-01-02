@@ -1,0 +1,43 @@
+/* Basic Table Styles */
+.table {
+  width: 80%;
+  margin: 20px auto; /* Centering the table with space around */
+  font-size: 16px;
+  border-collapse: collapse; /* Ensures border-collapse */
+}
+
+.table th {
+  background-color: #4CAF50; /* Custom green header */
+  color: white;
+  text-align: center;
+  padding: 10px; /* Padding to give space around text */
+}
+
+.table td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px; /* Padding for table cells */
+  border: 1px solid #ddd; /* Light border for the cells */
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f1f1f1; /* Light gray hover effect */
+}
+
+.text-center {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  font-size: 18px; /* Make text slightly larger */
+  text-align: center; /* Ensuring the text is centered */
+}
+
+/* Ensuring the table is responsive */
+@media (max-width: 768px) {
+  .table {
+    width: 100%; /* Full width on smaller screens */
+    font-size: 14px; /* Slightly smaller font size */
+  }
+  .table th, .table td {
+    padding: 8px; /* Smaller padding on smaller screens */
+  }
+}

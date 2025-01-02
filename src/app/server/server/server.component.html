@@ -1,0 +1,17 @@
+<label>Username</label>
+<input type="text" class="form-control" [(ngModel)]="name" />
+<p>{{ name }}</p>
+
+<!-- Reset Button -->
+<button class="btn btn-primary" [disabled]="name === ''" (click)="filter()">Reset User</button>
+<br />
+
+<!-- Add User Button -->
+<button class="btn btn-primary" [disabled]="name === ''" (click)="add()">Add User</button>
+
+
+<!-- Conditional Message -->
+<p *ngIf="addUser; else noName">Name was created, name is {{ name }}</p>
+<ng-template #noName>
+  <p>No name was created</p>
+</ng-template>
