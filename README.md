@@ -28,4 +28,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 
-This is the front-end for the App the back-end i"using SpringBoot
+This is the front-end for the App the back-end I'm using SpringBoot
